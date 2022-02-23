@@ -19,7 +19,6 @@ const GenericInput = (props: GenericInputProps) => {
               key={param.id}
               {...param}
               onChange={(e) => {
-                debugger
                 let val = e.target.value;
                 onChange('', 'name', val);
               }}
