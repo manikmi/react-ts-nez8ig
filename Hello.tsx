@@ -16,22 +16,15 @@ export default ({ name }) => {
       },
     ],
   });
-  //const stateValue = useState(dictProps);
   return (
     <>
       <h1>Hello {name}!</h1>
       <GenericInput
         dictProps={dictProps}
         onChange={(id: string, name: string, value: string) => {
-          console.log(dictProps);
           let dictParam = { ...dictProps };
-          console.log('dictParam: ', dictParam.dict_params);
           dictParam.dict_params[0].value = value;
-
-          //let dictValueLocal = [...stateValue, ...dictParam];
-
           setDictProps(dictParam);
-          console.log('id: ', id, 'name: ', name, 'value: ', value);
         }}
         type="dict"
       />
